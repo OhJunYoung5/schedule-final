@@ -1,5 +1,5 @@
-const STORAGE_KEY = "dark_mobile_calendar_icon_fixed_v1";
-const CALENDAR_ICON = `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+const STORAGE_KEY = "dark_mobile_list_summary_layout_v1";
+const CALENDAR_ICON = `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" stroke="currentColor" stroke-width="2"/>
   <path d="M7.5 3.5V7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
   <path d="M16.5 3.5V7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -121,7 +121,7 @@ function render() {
       <div class="actions">
         <button class="edit" type="button">✎ 수정</button>
         <button class="pay-edit" type="button">₩ 급여수정</button>
-        <button class="delete" type="button">🗑 삭제</button>
+        <button class="delete" type="button">삭제</button>
       </div>
     `;
 
@@ -151,7 +151,6 @@ function render() {
 
     card.querySelector(".delete").onclick = () => {
       if (!confirm("삭제할까요?")) return;
-
       schedules = schedules.filter((schedule) => schedule.id !== item.id);
       save();
       render();
@@ -164,7 +163,6 @@ function render() {
 hourBtn.onclick = () => {
   const value = prompt("근무시간 입력", tempHours || "");
   if (value === null) return;
-
   tempHours = value.replace(/[^0-9.]/g, "");
   showToast("근무시간 저장");
 };
@@ -172,7 +170,6 @@ hourBtn.onclick = () => {
 payBtn.onclick = () => {
   const value = prompt("일당 입력", tempPay || "");
   if (value === null) return;
-
   tempPay = value.replace(/[^0-9]/g, "");
   showToast("일당 저장");
 };
@@ -204,13 +201,11 @@ addBtn.onclick = () => {
 
   save();
   monthInput.value = monthKey(date);
-
   memoInput.value = "";
   tempHours = "";
   tempPay = "";
   editId = null;
   addBtn.textContent = "일정 추가";
-
   render();
 };
 
@@ -224,5 +219,4 @@ function moveMonth(amount) {
 prevBtn.onclick = () => moveMonth(-1);
 nextBtn.onclick = () => moveMonth(1);
 monthInput.onchange = render;
-
 render();
