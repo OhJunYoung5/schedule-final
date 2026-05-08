@@ -6,407 +6,297 @@ box-sizing:border-box;
 
 html,body{
 margin:0;
-background:#f5f5f5;
-font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+background:#f4f4f4;
+font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;
 color:#111;
 overflow-x:hidden;
 }
 
 body{
-padding:20px 14px 40px;
+padding:22px 16px 50px;
 }
 
-.wrap{
-width:100%;
-max-width:1100px;
+.app{
+max-width:760px;
 margin:0 auto;
-overflow:hidden;
 }
 
 h1{
 text-align:center;
-font-size:58px;
+font-size:32px;
 font-weight:900;
-letter-spacing:-3px;
-margin:10px 0 34px;
+letter-spacing:-1.5px;
+margin:28px 0 42px;
 }
 
-.add-box,
-.summary-box,
-.empty-box,
-.schedule-card{
+.card{
 background:#fff;
-border:1px solid #e7e7e7;
-border-radius:28px;
-box-shadow:0 8px 22px rgba(0,0,0,.04);
+border-radius:30px;
+padding:26px;
+box-shadow:0 6px 22px rgba(0,0,0,.04);
+border:1px solid #ececec;
 }
 
-.add-box{
-width:100%;
-padding:34px;
+.add-card{
 margin-bottom:34px;
-overflow:hidden;
 }
 
 label{
 display:block;
-font-size:26px;
-font-weight:900;
+font-size:18px;
+font-weight:800;
 margin-bottom:12px;
+margin-top:6px;
 }
 
 input,
 textarea{
-display:block;
 width:100%;
-max-width:100%;
-min-width:0;
-border:2px solid #e1e1e1;
-border-radius:18px;
-font-size:34px;
-padding:18px 22px;
-outline:none;
+border:2px solid #ececec;
+border-radius:20px;
 background:#fff;
+outline:none;
+font-size:20px;
+padding:18px;
 }
 
 input[type="date"]{
-width:100%;
-max-width:560px;
-height:86px;
-margin-bottom:28px;
+height:72px;
+margin-bottom:30px;
 }
 
 textarea{
-min-height:220px;
+min-height:170px;
 resize:none;
-margin-bottom:24px;
+margin-bottom:28px;
+line-height:1.5;
 }
 
-.mini-row{
+.row{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:18px;
-margin-bottom:24px;
+gap:14px;
+margin-bottom:26px;
 }
 
-.mini-row button{
-height:78px;
-border:2px solid #e2e2e2;
+.sub-btn{
+height:64px;
 border-radius:18px;
+border:2px solid #e8e8e8;
 background:#fff;
-font-size:34px;
+font-size:19px;
 font-weight:800;
+color:#2979ff;
 }
 
 .main-btn{
 width:100%;
-height:92px;
+height:76px;
 border:0;
-border-radius:18px;
+border-radius:22px;
 background:#000;
 color:#fff;
-font-size:42px;
+font-size:34px;
 font-weight:900;
 }
 
-.list-top{
+.list-header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:18px;
+margin-bottom:20px;
 gap:20px;
 }
 
-.list-top h2,
-.summary-box h2{
-font-size:42px;
-font-weight:900;
+.list-header h2,
+.summary-card h2{
 margin:0;
+font-size:26px;
+font-weight:900;
 }
 
 .month-nav{
 display:flex;
 align-items:center;
-gap:16px;
+gap:10px;
 }
 
 .month-nav button{
 border:0;
 background:none;
-font-size:58px;
+font-size:42px;
+color:#444;
 }
 
 .month-box{
 display:flex;
 align-items:center;
-gap:12px;
+gap:10px;
 background:#fff;
-border:1px solid #e5e5e5;
+padding:0 16px;
+height:58px;
 border-radius:18px;
-padding:0 18px;
-height:78px;
-}
-
-.month-box span{
-font-size:28px;
+border:1px solid #e9e9e9;
 }
 
 .month-box input{
 border:0;
 padding:0;
 height:auto;
-font-size:32px;
-width:240px;
+font-size:18px;
+width:135px;
 }
 
-.schedule-list{
+#scheduleList{
 display:flex;
 flex-direction:column;
-gap:16px;
-margin-bottom:26px;
+gap:18px;
+margin-bottom:28px;
 }
 
 .schedule-card{
+background:#fff;
+border-radius:28px;
 padding:28px;
-display:flex;
-justify-content:space-between;
-gap:20px;
-align-items:center;
+box-shadow:0 6px 20px rgba(0,0,0,.04);
+border:1px solid #ededed;
 }
 
-.left .date{
-font-size:44px;
+.date{
+font-size:30px;
 font-weight:900;
-margin-bottom:16px;
+margin-bottom:18px;
 }
 
-.left .memo{
-font-size:34px;
-line-height:1.4;
+.memo{
+font-size:22px;
+line-height:1.5;
+margin-bottom:24px;
 white-space:pre-wrap;
-}
-
-.right{
-display:flex;
-flex-direction:column;
-align-items:flex-end;
-gap:16px;
+word-break:break-word;
 }
 
 .badges{
 display:flex;
-gap:12px;
+gap:10px;
 flex-wrap:wrap;
-justify-content:flex-end;
+margin-bottom:18px;
 }
 
 .badge{
-border:2px solid #e3e3e3;
+padding:11px 14px;
 border-radius:999px;
-padding:14px 18px;
-font-size:26px;
+border:2px solid #ececec;
+font-size:17px;
 font-weight:800;
 background:#fff;
 }
 
 .actions{
-display:flex;
-gap:12px;
-flex-wrap:wrap;
-justify-content:flex-end;
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:10px;
 }
 
 .actions button{
-height:62px;
-padding:0 20px;
-border-radius:14px;
-border:2px solid #e3e3e3;
+height:54px;
+border-radius:16px;
+border:2px solid #ececec;
 background:#fff;
-font-size:24px;
+font-size:16px;
 font-weight:800;
 }
 
-.delete-btn{
+.delete{
 color:#ff3b30;
-}
-
-.summary-box{
-padding:28px;
 }
 
 .summary-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:18px;
-margin-top:18px;
+gap:16px;
+margin-top:20px;
 }
 
 .summary-item{
-border:2px solid #ededed;
-border-radius:18px;
-padding:26px;
+border:2px solid #f0f0f0;
+border-radius:24px;
+padding:28px 20px;
 text-align:center;
 }
 
 .summary-item span{
 display:block;
-font-size:24px;
-margin-bottom:10px;
+font-size:17px;
 font-weight:700;
+margin-bottom:10px;
 }
 
 .summary-item strong{
-font-size:44px;
+font-size:34px;
 font-weight:900;
 }
 
-.empty-box{
+.empty{
+background:#fff;
+border-radius:28px;
 padding:70px 20px;
 text-align:center;
-font-size:32px;
-color:#777;
-}
-
-.toast{
-position:fixed;
-bottom:26px;
-left:50%;
-transform:translateX(-50%);
-background:#000;
-color:#fff;
-padding:14px 18px;
-border-radius:999px;
 font-size:20px;
-opacity:0;
-transition:.25s;
-pointer-events:none;
+color:#777;
+border:1px solid #ededed;
 }
 
-.toast.show{
-opacity:1;
-}
-
-@media(max-width:768px){
+@media(max-width:640px){
 
 body{
-padding:18px 15px 40px;
+padding:18px 14px 40px;
 }
 
 h1{
-font-size:34px;
-letter-spacing:-1.8px;
-margin:18px 0 30px;
+font-size:28px;
+margin:18px 0 34px;
 }
 
-.add-box{
+.card,
+.schedule-card{
 padding:22px;
 border-radius:26px;
 }
 
-label{
-font-size:20px;
-margin-bottom:10px;
-}
-
-input,
-textarea{
-font-size:20px;
-border-radius:16px;
-padding:14px 16px;
-}
-
-input[type="date"]{
-width:100%;
-max-width:100%;
-height:64px;
-margin-bottom:26px;
-font-size:20px;
-text-align:center;
-}
-
-textarea{
-min-height:150px;
-}
-
-.mini-row{
+.row{
 grid-template-columns:1fr 1fr;
 gap:12px;
 }
 
-.mini-row button{
+.sub-btn{
+font-size:17px;
 height:58px;
-font-size:20px;
 }
 
 .main-btn{
-height:72px;
-font-size:30px;
-}
-
-.list-top{
-flex-direction:column;
-align-items:flex-start;
-}
-
-.list-top h2,
-.summary-box h2{
+height:70px;
 font-size:28px;
 }
 
-.month-box{
-height:58px;
-}
-
-.month-box input{
-font-size:20px;
-width:150px;
-}
-
-.schedule-card{
+.list-header{
 flex-direction:column;
 align-items:flex-start;
-}
-
-.left .date{
-font-size:30px;
-}
-
-.left .memo{
-font-size:22px;
-}
-
-.right{
-width:100%;
-align-items:flex-start;
-}
-
-.badge{
-font-size:16px;
-padding:10px 12px;
-}
-
-.actions{
-width:100%;
-display:grid;
-grid-template-columns:1fr 1fr 1fr;
-}
-
-.actions button{
-height:52px;
-font-size:16px;
-padding:0 4px;
 }
 
 .summary-grid{
 grid-template-columns:1fr;
 }
 
-.summary-item strong{
-font-size:30px;
+.date{
+font-size:26px;
 }
 
-.empty-box{
-font-size:22px;
-padding:50px 16px;
+.memo{
+font-size:20px;
+}
+
+.actions button{
+font-size:14px;
 }
 }

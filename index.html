@@ -4,76 +4,71 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>오준영 전용 스케줄 메모</title>
-
+<link rel="stylesheet" href="style.css">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon.png">
-<link rel="apple-touch-icon" href="icon.png">
-<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="wrap">
+<div class="app">
 
-    <h1>오준영 전용 스케줄 메모</h1>
+<h1>오준영 전용 스케줄 메모</h1>
 
-    <section class="add-box">
+<section class="card add-card">
 
-        <label>날짜 설정</label>
-        <input type="date" id="dateInput">
+<label>날짜 설정</label>
+<input type="date" id="dateInput">
 
-        <label>일정 메모</label>
-        <textarea id="memoInput" placeholder="일정을 입력하세요"></textarea>
+<label>일정 메모</label>
+<textarea id="memoInput" placeholder="일정을 입력하세요"></textarea>
 
-        <div class="mini-row">
-            <button id="hourBtn">◷ 근무시간 추가</button>
-            <button id="payBtn">₩ 일당 추가</button>
-        </div>
+<div class="row">
+<button id="hourBtn" class="sub-btn">◷ 근무시간 추가</button>
+<button id="payBtn" class="sub-btn">₩ 일당 추가</button>
+</div>
 
-        <button id="addBtn" class="main-btn">일정 추가</button>
+<button id="addBtn" class="main-btn">일정 추가</button>
 
-    </section>
+</section>
 
-    <div class="list-top">
-        <h2>일정 목록</h2>
+<div class="list-header">
+<h2>일정 목록</h2>
 
-        <div class="month-nav">
-            <button id="prevBtn">‹</button>
+<div class="month-nav">
+<button id="prevBtn">‹</button>
 
-            <div class="month-box">
-                <span>▣</span>
-                <input type="month" id="monthInput">
-            </div>
+<div class="month-box">
+▣
+<input type="month" id="monthInput">
+</div>
 
-            <button id="nextBtn">›</button>
-        </div>
-    </div>
+<button id="nextBtn">›</button>
+</div>
+</div>
 
-    <section id="scheduleList" class="schedule-list"></section>
+<section id="scheduleList"></section>
 
-    <section class="summary-box">
+<section class="card summary-card">
 
-        <h2 id="summaryTitle">월별 합계</h2>
+<h2 id="summaryTitle">월별 합계</h2>
 
-        <div class="summary-grid">
+<div class="summary-grid">
 
-            <div class="summary-item">
-                <span>◷ 총 근무시간</span>
-                <strong id="totalHours">0시간</strong>
-            </div>
+<div class="summary-item">
+<span>◷ 총 근무시간</span>
+<strong id="totalHours">0시간</strong>
+</div>
 
-            <div class="summary-item">
-                <span>₩ 총 급여</span>
-                <strong id="totalPay">0원</strong>
-            </div>
-
-        </div>
-
-    </section>
+<div class="summary-item">
+<span>₩ 총 급여</span>
+<strong id="totalPay">0원</strong>
+</div>
 
 </div>
 
-<div class="toast" id="toast"></div>
+</section>
+
+</div>
 
 <script src="app.js"></script>
 
