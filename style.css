@@ -466,9 +466,15 @@ button:active {
     font-size: 22px;
   }
 
-  .month-shell {
-    width: 140px;
-  }
+.month-shell{
+  width:210px;   /* 박스 크기 축소 */
+  height:56px;
+}
+
+#monthInput{
+  font-size:17px;  /* 글씨 크기 축소 */
+  min-width:110px;
+}
 
   .month-shell input {
     font-size: 16px;
