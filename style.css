@@ -501,8 +501,4 @@ button:active {
   .summary-card h2 {
     font-size: 19px;
   }
-
-  .down {
-  display: none !important;
-}
 }
