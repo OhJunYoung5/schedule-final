@@ -1,79 +1,74 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>오준영 전용 스케줄 메모</title>
-<link rel="stylesheet" href="style.css">
-<link rel="manifest" href="manifest.json">
-<link rel="icon" href="icon.png">
-<link rel="apple-touch-icon" href="icon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>오준영 전용 스케줄 메모</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon.png" />
+  <link rel="apple-touch-icon" href="icon.png" />
 </head>
 <body>
+  <main class="app">
+    <h1>오준영 전용 스케줄 메모</h1>
 
-<div class="app">
+    <section class="card add-card">
+      <label for="dateInput">날짜 설정</label>
 
-<h1>오준영 전용 스케줄 메모</h1>
+      <div class="date-shell">
+        <span class="date-icon">▣</span>
+        <input type="date" id="dateInput" />
+        <span class="date-icon">▣</span>
+      </div>
 
-<section class="card add-card">
+      <label for="memoInput">일정 메모</label>
+      <textarea id="memoInput" placeholder="일정을 입력하세요"></textarea>
 
-<label>날짜 설정</label>
-<input type="date" id="dateInput">
+      <div class="button-grid">
+        <button id="hourBtn" class="sub-btn" type="button">◷ 근무시간 추가</button>
+        <button id="payBtn" class="sub-btn" type="button">₩ 일당 추가</button>
+      </div>
 
-<label>일정 메모</label>
-<textarea id="memoInput" placeholder="일정을 입력하세요"></textarea>
+      <button id="addBtn" class="main-btn" type="button">일정 추가</button>
+    </section>
 
-<div class="row">
-<button id="hourBtn" class="sub-btn">◷ 근무시간 추가</button>
-<button id="payBtn" class="sub-btn">₩ 일당 추가</button>
-</div>
+    <section class="list-head">
+      <h2>일정 목록</h2>
 
-<button id="addBtn" class="main-btn">일정 추가</button>
+      <div class="month-nav">
+        <button id="prevBtn" type="button">‹</button>
+        <div class="month-shell">
+          <span>▣</span>
+          <input type="month" id="monthInput" />
+          <span>⌄</span>
+        </div>
+        <button id="nextBtn" type="button">›</button>
+      </div>
+    </section>
 
-</section>
+    <section id="scheduleList" class="schedule-list"></section>
 
-<div class="list-header">
-<h2>일정 목록</h2>
+    <section class="card summary-card">
+      <h2 id="summaryTitle">월별 합계</h2>
 
-<div class="month-nav">
-<button id="prevBtn">‹</button>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <span>◷ 총 근무시간</span>
+          <strong id="totalHours">0시간</strong>
+        </div>
 
-<div class="month-box">
-<span>▣</span>
-<input type="month" id="monthInput">
-</div>
+        <div class="summary-item">
+          <span>₩ 총 급여</span>
+          <strong id="totalPay">0원</strong>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<button id="nextBtn">›</button>
-</div>
-</div>
+  <div id="toast" class="toast"></div>
 
-<section id="scheduleList"></section>
-
-<section class="card summary-card">
-
-<h2 id="summaryTitle">월별 합계</h2>
-
-<div class="summary-grid">
-
-<div class="summary-item">
-<span>◷ 총 근무시간</span>
-<strong id="totalHours">0시간</strong>
-</div>
-
-<div class="summary-item">
-<span>₩ 총 급여</span>
-<strong id="totalPay">0원</strong>
-</div>
-
-</div>
-
-</section>
-
-</div>
-
-<div id="toast" class="toast"></div>
-
-<script src="app.js"></script>
-
+  <script src="app.js"></script>
 </body>
 </html>
