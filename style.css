@@ -32,12 +32,12 @@ textarea {
 }
 
 h1 {
-  margin: 66px 0 50px;
+  margin: 72px 0 42px;
   text-align: center;
   font-size: 38px;
-  line-height: 1.1;
+  line-height: 1.18;
   font-weight: 900;
-  letter-spacing: -2px;
+  letter-spacing: -1.2px;
   color: #f4f4f4;
   text-shadow: 0 4px 18px rgba(255,255,255,0.08);
 }
