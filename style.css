@@ -14,6 +14,7 @@ overflow-x:hidden;
 
 body{
 padding:22px 16px 50px;
+overflow-x:hidden;
 }
 
 .app{
@@ -61,8 +62,24 @@ padding:18px;
 }
 
 input[type="date"]{
-height:72px;
-margin-bottom:30px;
+display:block;
+width:100%;
+max-width:100%;
+min-width:0;
+height:64px;
+margin-bottom:24px;
+
+font-size:20px;
+
+padding:0 16px;
+
+border:2px solid #e1e1e1;
+border-radius:18px;
+
+appearance:none;
+-webkit-appearance:none;
+
+overflow:hidden;
 }
 
 textarea{
@@ -247,7 +264,7 @@ color:#777;
 border:1px solid #ededed;
 }
 
-@media(max-width:640px){
+@media(max-width:768px){
 
 body{
 padding:18px 14px 40px;
