@@ -183,7 +183,7 @@ button:active {
   transform: scale(0.985);
 }
 
-/* 핵심: 모바일에서도 사진처럼 제목과 월 선택을 한 줄 정렬 */
+/* 두번째 사진처럼: 제목과 월 선택이 같은 줄, 전체 높이는 낮게 */
 .list-top {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -285,33 +285,33 @@ button:active {
   margin-bottom: 24px;
 }
 
-/* 핵심: 일정 목록 빈 박스 높이와 중앙정렬을 사진처럼 */
+/* 핵심: 첫번째처럼 과하게 높지 않게, 두번째 사진 비율로 */
 .empty {
-  min-height: 146px;
-  padding: 24px 20px;
+  min-height: 118px;
+  padding: 18px 18px;
   border: 1.5px solid #30343b;
   border-radius: 22px;
   background:
-    radial-gradient(circle at 50% 0%, rgba(60, 68, 78, 0.13), transparent 260px),
+    radial-gradient(circle at 50% 0%, rgba(60, 68, 78, 0.13), transparent 220px),
     rgba(28, 31, 36, 0.88);
   color: #a2a7b0;
   display: grid;
   place-items: center;
   text-align: center;
-  font-size: 17px;
-  line-height: 1.55;
+  font-size: 16px;
+  line-height: 1.45;
   box-shadow: 0 12px 34px rgba(0, 0, 0, 0.24);
 }
 
 .empty-icon {
   display: block;
-  margin: 0 auto 10px;
+  margin: 0 auto 8px;
   color: #9fa4ad;
 }
 
 .empty-icon svg {
-  width: 42px;
-  height: 42px;
+  width: 36px;
+  height: 36px;
 }
 
 .schedule-card {
@@ -376,27 +376,27 @@ button:active {
   color: #ff625d;
 }
 
+/* 핵심: 합계 박스를 사진처럼 낮고 가로 2칸 유지 */
 .summary-card {
-  padding: 20px 18px;
+  padding: 18px 18px 14px;
 }
 
 .summary-card h2 {
-  margin: 0 0 18px;
-  font-size: 22px;
+  margin: 0 0 16px;
+  font-size: 20px;
   font-weight: 900;
   letter-spacing: -0.7px;
 }
 
-/* 핵심: 모바일에서도 합계 2칸을 가로로 유지 */
 .summary-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  gap: 12px;
 }
 
 .summary-item {
-  min-height: 78px;
-  padding: 15px 10px;
+  min-height: 68px;
+  padding: 12px 8px;
   border: 1.6px solid #343941;
   border-radius: 13px;
   background: rgba(13, 16, 20, 0.68);
@@ -408,16 +408,16 @@ button:active {
 
 .summary-item span {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   color: #c7cbd1;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
 }
 
 .summary-item strong {
   display: block;
   color: #fff;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 900;
   letter-spacing: -0.6px;
 }
@@ -463,14 +463,23 @@ button:active {
   }
 
   .list-top h2 {
-    font-size: 23px;
+    font-size: 22px;
   }
 
   .month-shell {
-    width: 142px;
+    width: 140px;
   }
 
   .month-shell input {
     font-size: 16px;
+  }
+
+  .empty {
+    min-height: 112px;
+    font-size: 15px;
+  }
+
+  .summary-card h2 {
+    font-size: 19px;
   }
 }

@@ -1,4 +1,4 @@
-const STORAGE_KEY = "dark_mobile_list_summary_layout_v1";
+const STORAGE_KEY = "dark_mobile_compact_list_layout_v1";
 const CALENDAR_ICON = `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" stroke="currentColor" stroke-width="2"/>
   <path d="M7.5 3.5V7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
