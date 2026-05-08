@@ -235,7 +235,7 @@ button:active {
 }
 
 #monthInput {
-  font-size: 10px;   /* 핵심 */
+  font-size: 15px;   /* 핵심 */
   font-weight: 700;
 
   width: auto;
