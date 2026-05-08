@@ -58,6 +58,15 @@ function formatPay(v){
 return Number(v||0).toLocaleString("ko-KR")+"원";
 }
 
+function escapeHtml(text){
+return text
+.replaceAll("&","&amp;")
+.replaceAll("<","&lt;")
+.replaceAll(">","&gt;")
+.replaceAll('"',"&quot;")
+.replaceAll("'","&#039;");
+}
+
 function renderSummary(){
 
 const selected = monthInput.value;
@@ -100,7 +109,7 @@ card.className = "schedule-card";
 card.innerHTML = `
 <div class="left">
 <div class="date">${formatDate(item.date)}</div>
-<div class="memo">${item.memo}</div>
+<div class="memo">${escapeHtml(item.memo)}</div>
 </div>
 
 <div class="right">
