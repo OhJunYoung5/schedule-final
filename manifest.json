@@ -3,8 +3,9 @@
   "short_name": "스케줄 메모",
   "display": "standalone",
   "start_url": "./index.html",
-  "background_color": "#f4f4f4",
-  "theme_color": "#f4f4f4",
+  "background_color": "#111315",
+  "theme_color": "#111315",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "icon.png",
