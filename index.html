@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>오준영 전용 스케줄 메모</title>
-
   <link rel="stylesheet" href="style.css" />
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="icon.png" />
@@ -18,9 +17,19 @@
       <label for="dateInput">날짜 설정</label>
 
       <div class="date-shell">
-        <span class="date-icon">▣</span>
+        <span class="date-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" stroke="currentColor" stroke-width="2"/>
+  <path d="M7.5 3.5V7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="M16.5 3.5V7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="M4 10H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg></span>
         <input type="date" id="dateInput" />
-        <span class="date-icon">▣</span>
+        <span class="date-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" stroke="currentColor" stroke-width="2"/>
+  <path d="M7.5 3.5V7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="M16.5 3.5V7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="M4 10H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg></span>
       </div>
 
       <label for="memoInput">일정 메모</label>
@@ -40,9 +49,14 @@
       <div class="month-nav">
         <button id="prevBtn" type="button">‹</button>
         <div class="month-shell">
-          <span>▣</span>
+          <span class="month-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" stroke="currentColor" stroke-width="2"/>
+  <path d="M7.5 3.5V7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="M16.5 3.5V7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="M4 10H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg></span>
           <input type="month" id="monthInput" />
-          <span>⌄</span>
+          <span class="down-icon">⌄</span>
         </div>
         <button id="nextBtn" type="button">›</button>
       </div>

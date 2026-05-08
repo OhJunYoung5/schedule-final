@@ -1,4 +1,10 @@
-const STORAGE_KEY = "dark_mobile_centered_schedule_app_v1";
+const STORAGE_KEY = "dark_mobile_calendar_icon_fixed_v1";
+const CALENDAR_ICON = `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" stroke="currentColor" stroke-width="2"/>
+  <path d="M7.5 3.5V7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="M16.5 3.5V7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="M4 10H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>`;
 
 const dateInput = document.getElementById("dateInput");
 const memoInput = document.getElementById("memoInput");
@@ -88,7 +94,7 @@ function render() {
     scheduleList.innerHTML = `
       <div class="empty">
         <div>
-          <span class="empty-icon">▣</span>
+          <span class="empty-icon">${CALENDAR_ICON}</span>
           등록된 일정이 없습니다.<br />
           일정을 추가해보세요.
         </div>
