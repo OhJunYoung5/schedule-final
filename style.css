@@ -221,38 +221,30 @@ button:active {
 }
 
 .month-shell {
-  width: 220px; /* 기존보다 넓게 */
-  height: 58px;
+  width: 210px;
+  height: 56px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
 
-  padding: 0 16px;
-
-  border: 1.5px solid #30343b;
+  padding: 0 14px;
   border-radius: 18px;
-  background: rgba(28, 31, 36, 0.92);
 
   white-space: nowrap;
 }
 
 #monthInput {
-  width: auto;
-  min-width: 110px;
-
-  font-size: 17px;
+  font-size: 15px;   /* 핵심 */
   font-weight: 700;
 
-  color: #f4f4f4;
-  background: transparent;
-  border: none;
-  outline: none;
+  width: auto;
+  min-width: 96px;
 
   text-align: center;
-
   white-space: nowrap;
+
+  line-height: 1;
 }
 
 .month-cal {
