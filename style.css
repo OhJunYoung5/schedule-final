@@ -1,7 +1,7 @@
 
 .month-shell{
-  width:240px;
-  height:62px;
+  width:210px;
+  height:56px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -10,8 +10,8 @@
 }
 
 #monthInput{
-  min-width:140px;
-  font-size:20px;
+  min-width:110px;
+  font-size:17px;
   font-weight:700;
   text-align:center;
   white-space:nowrap;
