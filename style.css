@@ -32,14 +32,21 @@ textarea {
 }
 
 h1 {
-  margin: 38px 0 58px;
+  margin: 32px 0 52px;
   text-align: center;
-  font-size: 50px;
+
+  font-size: 46px;
   line-height: 1.05;
   font-weight: 900;
+
   letter-spacing: -3px;
+  white-space: nowrap;
+
   color: #f4f4f4;
-  text-shadow: 0 4px 18px rgba(255,255,255,0.08);
+
+  text-shadow:
+    0 0 12px rgba(255,255,255,0.08),
+    0 0 28px rgba(255,255,255,0.05);
 }
 
 .card {
