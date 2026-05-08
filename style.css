@@ -1,0 +1,388 @@
+
+*{
+box-sizing:border-box;
+-webkit-tap-highlight-color:transparent;
+}
+
+html,body{
+margin:0;
+background:#f5f5f5;
+font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+color:#111;
+}
+
+body{
+padding:20px 14px 40px;
+}
+
+.wrap{
+max-width:1100px;
+margin:0 auto;
+}
+
+h1{
+text-align:center;
+font-size:58px;
+font-weight:900;
+letter-spacing:-3px;
+margin:10px 0 34px;
+}
+
+.add-box,
+.summary-box,
+.empty-box,
+.schedule-card{
+background:#fff;
+border:1px solid #e7e7e7;
+border-radius:28px;
+box-shadow:0 8px 22px rgba(0,0,0,.04);
+}
+
+.add-box{
+padding:34px;
+margin-bottom:34px;
+}
+
+label{
+display:block;
+font-size:26px;
+font-weight:900;
+margin-bottom:12px;
+}
+
+input,
+textarea{
+width:100%;
+border:2px solid #e1e1e1;
+border-radius:18px;
+font-size:34px;
+padding:18px 22px;
+outline:none;
+background:#fff;
+}
+
+input[type="date"]{
+max-width:560px;
+height:86px;
+margin-bottom:28px;
+}
+
+textarea{
+min-height:220px;
+resize:none;
+margin-bottom:24px;
+}
+
+.mini-row{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+margin-bottom:24px;
+}
+
+.mini-row button{
+height:78px;
+border:2px solid #e2e2e2;
+border-radius:18px;
+background:#fff;
+font-size:34px;
+font-weight:800;
+}
+
+.main-btn{
+width:100%;
+height:92px;
+border:0;
+border-radius:18px;
+background:#000;
+color:#fff;
+font-size:42px;
+font-weight:900;
+}
+
+.list-top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:18px;
+gap:20px;
+}
+
+.list-top h2,
+.summary-box h2{
+font-size:42px;
+font-weight:900;
+margin:0;
+}
+
+.month-nav{
+display:flex;
+align-items:center;
+gap:16px;
+}
+
+.month-nav button{
+border:0;
+background:none;
+font-size:58px;
+}
+
+.month-box{
+display:flex;
+align-items:center;
+gap:12px;
+background:#fff;
+border:1px solid #e5e5e5;
+border-radius:18px;
+padding:0 18px;
+height:78px;
+}
+
+.month-box span{
+font-size:28px;
+}
+
+.month-box input{
+border:0;
+padding:0;
+height:auto;
+font-size:32px;
+width:240px;
+}
+
+.schedule-list{
+display:flex;
+flex-direction:column;
+gap:16px;
+margin-bottom:26px;
+}
+
+.schedule-card{
+padding:28px;
+display:flex;
+justify-content:space-between;
+gap:20px;
+align-items:center;
+}
+
+.left .date{
+font-size:44px;
+font-weight:900;
+margin-bottom:16px;
+}
+
+.left .memo{
+font-size:34px;
+line-height:1.4;
+white-space:pre-wrap;
+}
+
+.right{
+display:flex;
+flex-direction:column;
+align-items:flex-end;
+gap:16px;
+}
+
+.badges{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+justify-content:flex-end;
+}
+
+.badge{
+border:2px solid #e3e3e3;
+border-radius:999px;
+padding:14px 18px;
+font-size:26px;
+font-weight:800;
+background:#fff;
+}
+
+.actions{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+justify-content:flex-end;
+}
+
+.actions button{
+height:62px;
+padding:0 20px;
+border-radius:14px;
+border:2px solid #e3e3e3;
+background:#fff;
+font-size:24px;
+font-weight:800;
+}
+
+.delete-btn{
+color:#ff3b30;
+}
+
+.summary-box{
+padding:28px;
+}
+
+.summary-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+margin-top:18px;
+}
+
+.summary-item{
+border:2px solid #ededed;
+border-radius:18px;
+padding:26px;
+text-align:center;
+}
+
+.summary-item span{
+display:block;
+font-size:24px;
+margin-bottom:10px;
+font-weight:700;
+}
+
+.summary-item strong{
+font-size:44px;
+font-weight:900;
+}
+
+.empty-box{
+padding:70px 20px;
+text-align:center;
+font-size:32px;
+color:#777;
+}
+
+.toast{
+position:fixed;
+bottom:26px;
+left:50%;
+transform:translateX(-50%);
+background:#000;
+color:#fff;
+padding:14px 18px;
+border-radius:999px;
+font-size:20px;
+opacity:0;
+transition:.25s;
+pointer-events:none;
+}
+
+.toast.show{
+opacity:1;
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:34px;
+margin-top:0;
+}
+
+.add-box{
+padding:22px;
+}
+
+label{
+font-size:18px;
+}
+
+input,
+textarea{
+font-size:20px;
+}
+
+input[type="date"]{
+height:62px;
+}
+
+textarea{
+min-height:150px;
+}
+
+.mini-row{
+grid-template-columns:1fr 1fr;
+}
+
+.mini-row button{
+height:58px;
+font-size:20px;
+}
+
+.main-btn{
+height:70px;
+font-size:28px;
+}
+
+.list-top{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.list-top h2,
+.summary-box h2{
+font-size:28px;
+}
+
+.month-box{
+height:58px;
+}
+
+.month-box input{
+font-size:20px;
+width:150px;
+}
+
+.schedule-card{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.left .date{
+font-size:30px;
+}
+
+.left .memo{
+font-size:22px;
+}
+
+.right{
+width:100%;
+align-items:flex-start;
+}
+
+.badge{
+font-size:16px;
+padding:10px 12px;
+}
+
+.actions{
+width:100%;
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+}
+
+.actions button{
+height:52px;
+font-size:16px;
+padding:0 4px;
+}
+
+.summary-grid{
+grid-template-columns:1fr;
+}
+
+.summary-item strong{
+font-size:30px;
+}
+
+.empty-box{
+font-size:22px;
+padding:50px 16px;
+}
+}

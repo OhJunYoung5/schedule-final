@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>오준영 전용 스케줄 메모</title>
+
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="wrap">
+
+    <h1>오준영 전용 스케줄 메모</h1>
+
+    <section class="add-box">
+
+        <label>날짜 설정</label>
+        <input type="date" id="dateInput">
+
+        <label>일정 메모</label>
+        <textarea id="memoInput" placeholder="일정을 입력하세요"></textarea>
+
+        <div class="mini-row">
+            <button id="hourBtn">◷ 근무시간 추가</button>
+            <button id="payBtn">₩ 일당 추가</button>
+        </div>
+
+        <button id="addBtn" class="main-btn">일정 추가</button>
+
+    </section>
+
+    <div class="list-top">
+        <h2>일정 목록</h2>
+
+        <div class="month-nav">
+            <button id="prevBtn">‹</button>
+
+            <div class="month-box">
+                <span>▣</span>
+                <input type="month" id="monthInput">
+            </div>
+
+            <button id="nextBtn">›</button>
+        </div>
+    </div>
+
+    <section id="scheduleList" class="schedule-list"></section>
+
+    <section class="summary-box">
+
+        <h2 id="summaryTitle">월별 합계</h2>
+
+        <div class="summary-grid">
+
+            <div class="summary-item">
+                <span>◷ 총 근무시간</span>
+                <strong id="totalHours">0시간</strong>
+            </div>
+
+            <div class="summary-item">
+                <span>₩ 총 급여</span>
+                <strong id="totalPay">0원</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
